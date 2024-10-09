@@ -8,100 +8,74 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif; /* Consistent font for professional look */
-    font-size: 16px; /* Slightly larger font size for better readability */
-    color: #333; /* Dark grey for better readability */
-    background-color: #fff; /* White background to match the example */
-    max-width: 800px; /* Restricts the content width */
-    margin: 40px auto; /* Centers the content horizontally with margin */
-    padding: 20px; /* Padding around the content */
-    border: 1px solid #ccc; /* Adds a subtle border for content separation */
-    line-height: 1.6; /* Line height for better text readability */
+    font-family: 'Arial', sans-serif; /* Clean, professional font */
+    font-size: 16px; /* Slightly larger font size */
+    line-height: 1.8; /* Increased line height for readability */
+    color: #333; /* Dark grey text for better readability */
+    background-color: #fff; /* White background */
+    max-width: 800px; /* Max width for the content area */
+    margin: 40px auto; /* Center the content block horizontally */
+    padding: 20px; /* Padding to avoid content sticking to the edges */
+    border: 1px solid #ccc; /* Adds a subtle border for a tidy layout */
 }
 
-h1, h2, h3 {
-    text-align: center; /* Centers the headings */
-    margin-top: 20px; /* Adds top margin to each heading */
-    color: #000; /* Ensures text is black for headings */
+h1, h2, h3, h4 {
+    color: #000; /* Black color for headers for better contrast */
+    font-weight: normal; /* Default weight for a more modern look */
 }
 
 h1 {
-    font-size: 28px; /* Larger font size for the main title */
-    margin-bottom: 10px; /* Smaller bottom margin for closer spacing to content */
+    font-size: 28px; /* Larger font size for main heading */
+    text-align: center; /* Center-align the title */
+    margin-bottom: 0.5em; /* Space below the header */
 }
 
 h2 {
-    font-size: 24px; /* Slightly smaller than h1 for hierarchical structure */
-    border-bottom: 2px solid #ccc; /* Adds a line under the heading */
-    padding-bottom: 10px; /* Padding under the heading before the line */
+    font-size: 22px; /* Size for secondary headings */
+    text-align: center; /* Center-align secondary headings */
+    margin-top: 2em; /* Space above subheadings */
+    margin-bottom: 0.5em; /* Space below subheadings */
+    border-bottom: 2px solid #ccc; /* Adds a solid line below the heading */
+    padding-bottom: 0.3em; /* Small padding below the heading */
 }
 
 h3 {
-    font-size: 20px; /* Smaller than h2 */
-    margin-top: 30px; /* More space above h3 elements to separate sections */
+    font-size: 18px; /* Size for tertiary headings */
+    margin-top: 1.5em; /* Space above tertiary headings */
+    text-align: left; /* Left-align for sub-section titles */
 }
 
 p, ul, li {
-    text-align: left; /* Aligns text to the left for paragraphs and lists */
-    margin-left: 20px; /* Indent for paragraphs and list items */
-    margin-bottom: 10px; /* Bottom margin for spacing between paragraphs and items */
+    text-align: left; /* Aligns text to the left for paragraphs and list items */
+    margin-bottom: 0.8em; /* Space below paragraphs and list items */
 }
 
 ul {
-    list-style-type: disc; /* Uses disc for bullet points */
-    padding-left: 20px; /* Adds padding to align list item text away from the bullet */
+    padding-left: 20px; /* Indent for unordered lists */
+    list-style-type: disc; /* Style of bullet points */
 }
 
 a {
-    color: #067df7; /* Standard link color */
+    color: #067df7; /* Bright link color */
     text-decoration: none; /* No underline by default */
 }
 
 a:hover {
-    text-decoration: underline; /* Underline on hover for clarity */
+    text-decoration: underline; /* Underline on hover for better interaction feedback */
 }
 
+.contact-info, .summary, .education, .professional-experience, .certifications, .skills {
+    margin-bottom: 2em; /* Space between sections for clarity */
+}
 
-    #code-csp-warning {
-        position: fixed;
-        top: 0;
-        right: 0;
-        color: white;
-        margin: 16px;
-        text-align: center;
-        font-size: 12px;
-        font-family: sans-serif;
-        background-color: #444444;
-        cursor: pointer;
-        padding: 6px;
-        box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-    }
+.contact-info ul, .education ul, .professional-experience ul, .certifications ul, .skills ul {
+    list-style-type: none; /* Removes bullets from lists in these sections */
+    padding-left: 0; /* Removes default padding for these lists */
+}
 
-    #code-csp-warning:hover {
-        background-color: #007acc;
-        box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-    }
-
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 5px;
-        text-align: left;
-    }
-
-    blockquote {
-        background: rgba(127, 127, 127, 0.1);
-        border-left: 5px solid rgba(0, 122, 204, 0.5);
-        padding: 0.5em 10px;
-        margin: 20px 0;
-    }
-
-    code {
-        background-color: rgba(220, 220, 220, 0.4);
-        color: #A31515;
-        padding: 2px 4px;
-        font-family: Consolas, 'Courier New', monospace;
-    }
+.contact-info li, .education li, .professional-experience li, .certifications li, .skills li {
+    margin-bottom: 0.5em; /* Consistent spacing for list items */
+}
 </style>
 
 </head>
