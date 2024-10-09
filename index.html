@@ -8,170 +8,174 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333;
-    background-color: #fff;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
+    font-family: Arial, sans-serif; /* Consistent font for professional look */
+    font-size: 16px; /* Slightly larger font size for better readability */
+    color: #333; /* Dark grey for better readability */
+    background-color: #fff; /* White background to match the example */
+    max-width: 800px; /* Restricts the content width */
+    margin: 40px auto; /* Centers the content horizontally with margin */
+    padding: 20px; /* Padding around the content */
+    border: 1px solid #ccc; /* Adds a subtle border for content separation */
+    line-height: 1.6; /* Line height for better text readability */
 }
 
-header, section, article, footer {
-    margin-bottom: 20px;
+h1, h2, h3 {
+    text-align: center; /* Centers the headings */
+    margin-top: 20px; /* Adds top margin to each heading */
+    color: #000; /* Ensures text is black for headings */
 }
 
 h1 {
-    color: #007acc; /* Specific blue color for the CV title */
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 10px;
+    font-size: 28px; /* Larger font size for the main title */
+    margin-bottom: 10px; /* Smaller bottom margin for closer spacing to content */
 }
 
 h2 {
-    font-size: 22px;
-    color: #333;
-    margin-top: 20px;
-    text-align: center;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #ccc;
+    font-size: 24px; /* Slightly smaller than h1 for hierarchical structure */
+    border-bottom: 2px solid #ccc; /* Adds a line under the heading */
+    padding-bottom: 10px; /* Padding under the heading before the line */
 }
 
 h3 {
-    font-size: 20px;
-    text-align: left;
-    margin-top: 10px;
-    color: #000;
-}
-
-h4 {
-    font-size: 18px;
-    color: #333;
-    margin-top: 5px;
-    text-align: left;
+    font-size: 20px; /* Smaller than h2 */
+    margin-top: 30px; /* More space above h3 elements to separate sections */
 }
 
 p, ul, li {
-    text-align: left;
-    margin-left: 20px;
-    margin-bottom: 10px;
+    text-align: left; /* Aligns text to the left for paragraphs and lists */
+    margin-left: 20px; /* Indent for paragraphs and list items */
+    margin-bottom: 10px; /* Bottom margin for spacing between paragraphs and items */
 }
 
 ul {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style-type: disc; /* Uses disc for bullet points */
+    padding-left: 20px; /* Adds padding to align list item text away from the bullet */
 }
 
 a {
-    color: #007acc;
-    text-decoration: none;
+    color: #067df7; /* Standard link color */
+    text-decoration: none; /* No underline by default */
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover for clarity */
 }
 
-.contact-info li, .summary p, .technical li, .soft li, .methodologies li, .language-skills li {
-    font-size: 16px; /* Ensures uniform font size across the document */
-}
 
-.contact-info ul, .summary, .education ul, .professional-experience ul, .certifications ul, .skills ul {
-    padding-left: 0; /* Removes padding for lists in these sections for alignment */
-}
+    #code-csp-warning {
+        position: fixed;
+        top: 0;
+        right: 0;
+        color: white;
+        margin: 16px;
+        text-align: center;
+        font-size: 12px;
+        font-family: sans-serif;
+        background-color: #444444;
+        cursor: pointer;
+        padding: 6px;
+        box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+    }
+
+    #code-csp-warning:hover {
+        background-color: #007acc;
+        box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+        text-align: left;
+    }
+
+    blockquote {
+        background: rgba(127, 127, 127, 0.1);
+        border-left: 5px solid rgba(0, 122, 204, 0.5);
+        padding: 0.5em 10px;
+        margin: 20px 0;
+    }
+
+    code {
+        background-color: rgba(220, 220, 220, 0.4);
+        color: #A31515;
+        padding: 2px 4px;
+        font-family: Consolas, 'Courier New', monospace;
+    }
 </style>
 
 </head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Boriss Serikovs - CV</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
-    <header>
-        <h1>Boriss Serikovs</h1>
-    </header>
-    
-    <section id="professional-background">
-        <h2>Professional Background</h2>
-        <article id="knowledge-and-expertise">
-            <h3>Knowledge and Expertise</h3>
-            <p>Knowledge of testing and deployment procedures allows me to bridge the gap between development and operations for an efficient work model. I enjoy scripting, configuring CI/CD pipelines, and infrastructures, searching for interesting decisions, and solving tasks.</p>
-        </article>
-        
-        <article id="education">
-            <h3>Education</h3>
-            <ul>
-                <li><strong>Riga Coding School (2019)</strong> - "Programming basics in 6 weeks" certificate achieved. Theoretical knowledge and practical skills have been acquired in the framework of the courses.</li>
-                <li><strong>Riga Technical University (2012-2017)</strong> - Professional Bachelor Degree in Entrepreneurship and Management and Economist Qualification.</li>
-            </ul>
-        </article>
-    </section>
-    
-    <section id="professional-experience">
-        <h2>Professional Experience</h2>
-        <article id="ltd-itbo-own-company-sre-operations-122023-current">
-            <h3>LTD ITBO (Own company), SRE, Operations (12/2023-current)</h3>
-            <p><strong>Senior DevOps, Infrastructure Engineer</strong></p>
-            <ul>
-                <li>Lead collaboration with large enterprise to manage operational needs for over 50 projects, implementing SRE standards to drive reliability and performance.</li>
-                <li>Provide environment troubleshooting, effectively resolving issues and streamlining task completion, minimizing downtime.</li>
-                <li>Expertly deployed and orchestrated various environments and resources using Terraform, enhancing the deployment process and offering scalable solutions.</li>
-                <li>Deployed and configured a significant portion of Azure resources, showcasing expertise in cloud infrastructure and contributing to the robustness of service delivery.</li>
-            </ul>
-            <p><strong>Tech stack:</strong> Terraform, YML, PowerShell, CLI, SHELL, Linux, Packer, DevOps, flexible servers, Azure Front Door, VMs, AKS, AppGateway, NSG, VNET, NAT gateway, WAF, Web Services, Log Analytics, ACR, Management Groups, etc.</p>
-        </article>
-    </section>
-    
-    <footer>
-        <h2>Certifications</h2>
-        <ul>
-            <li>Microsoft Certified: Azure Solutions Architect Expert, AZ-305 (Designing Microsoft Azure Infrastructure Solutions), AZ-104 (Microsoft Azure Administrator), AZ-900 (Azure Fundamentals).</li>
-            <li>Riga Coding School (Programming basics in 6 weeks certificate achieved/Riga).</li>
-        </ul>
-        
-        <h2>Skills</h2>
-        <section id="technical-skills">
-            <h3>Technical:</h3>
-            <ul>
-                <li>Cloud architecture, Azure Cloud, PowerShell, ARM Template, YAML, Bicep, SHELL, CLI, Terraform, Packer.</li>
-                <li>CI/CD pipelines, GitHub Actions, DevOps Azure, GitLab, Jenkins, Octopus, TeamCity.</li>
-                <li>Docker Container, AKS, K8S.</li>
-                <li>.NET, Angular.</li>
-                <li>SQL, Postgres, MySQL Linux Ubuntu server, IIS, flexible servers.</li>
-                <li>Visual Studio Code, Visual Studio.</li>
-                <li>Sonar Cloud, SonarQube.</li>
-                <li>Service Bus, RabbitMQ.</li>
-            </ul>
-        </section>
-        
-        <section id="soft-skills">
-            <h3>Soft:</h3>
-            <ul>
-                <li>Microsoft, Linux.</li>
-            </ul>
-        </section>
-        
-        <section id="methodologies">
-            <h3>Methodologies:</h3>
-            <ul>
-                <li>Scrum, Agile, CI/CD, SRE.</li>
-            </ul>
-        </section>
-        
-        <section id="language-skills">
-            <h3>Language Skills</h3>
-            <ul>
-                <li>English – Good</li>
-                <li>Russian – Native</li>
-                <li>Latvian – Fluent</li>
-            </ul>
-        </section>
-    </footer>
-</body>
-</html>
+<h2 id="type-your-content-here-boriss-serikovs">Type your <strong>content</strong> <em>here</em># Boriss Serikovs</h2>
+<h2 id="professional-background">Professional Background</h2>
+<h3 id="knowledge-and-expertise">Knowledge and Expertise</h3>
+<p>Knowledge of testing and deployment procedures allows me to bridge the gap between development and operations for an efficient work model. I enjoy scripting, configuring CI/CD pipelines, and infrastructures, searching for interesting decisions, and solving tasks.</p>
+<h3 id="education">Education</h3>
+<ul>
+<li><strong>Riga Coding School (2019)</strong><br>
+&quot;Programming basics in 6 weeks&quot; certificate achieved. Theoretical knowledge and practical skills have been acquired in the framework of the courses.</li>
+<li><strong>Riga Technical University (2012-2017)</strong><br>
+Information identifying the qualification: Professional Bachelor Degree in Entrepreneurship and Management and Economist Qualification.</li>
+</ul>
+<h3 id="professional-experience">Professional Experience</h3>
+<h4 id="ltd-itbo-own-company-sre-operations-122023-current">LTD ITBO (Own company), SRE, Operations (12/2023-current)</h4>
+<p><strong>Senior DevOps, Infrastructure Engineer</strong></p>
+<ul>
+<li>Lead collaboration with large enterprise to manage operational needs for over 50 projects, implementing SRE standards to drive reliability and performance.</li>
+<li>Provide environment troubleshooting, effectively resolving issues and streamlining task completion, minimizing downtime.</li>
+<li>Expertly deployed and orchestrated various environments and resources using Terraform, enhancing the deployment process and offering scalable solutions.</li>
+<li>Deployed and configured a significant portion of Azure resources, showcasing expertise in cloud infrastructure and contributing to the robustness of service delivery.</li>
+</ul>
+<p><strong>Tech stack:</strong> Terraform, YML, PowerShell, CLI, SHELL, Linux, Packer, DevOps, flexible servers, Azure Front Door, VMs, AKS, AppGateway, NSG, VNET, NAT gateway, WAF, Web Services, Log Analytics, ACR, Management Groups, etc.</p>
+<h4 id="altudo-development-service-microservices-implementation-062023-122023">Altudo, Development Service, Microservices Implementation (06/2023-12/2023)</h4>
+<p><strong>DevOps, Infrastructure Engineer</strong></p>
+<ul>
+<li>Main responsibilities in this project create and configure infrastructure in Microsoft Azure, develop Bicep templates for resource deployment, actively automate processes using Shell, PowerShell, and CLI scripts, configure Docker containers, and set up OPEN API in API Management for API management and documentation. This work streamlines development processes, enhances scalability and reliability, and improves API accessibility.</li>
+</ul>
+<p><strong>Tech stack:</strong> .NET Framework, YML, PowerShell, CLI, SHELL, Microsoft Azure, GitHub Actions, SQL, Docker container, Bicep, Linux, API management, open API, Linux.</p>
+<h4 id="accenture-development-service-122020-062023">Accenture, Development Service (12/2020-06/2023)</h4>
+<p><strong>DevOps Team Lead, Infrastructure Engineer</strong></p>
+<ul>
+<li>Main responsibilities in this project for one country's European Union government, serving as the infrastructure engineer responsible for setting up and maintaining multiple environments in Microsoft Azure, deploying over 16 specialized applications, and creating CI/CD pipelines to streamline the development and deployment processes. My expertise encompassed scripting, ARM/Bicep templates, App Service configuration, Service Bus integration, and Application Insights setup etc., all contributing to the successful delivery of robust solutions tailored to governmental requirements within the EU.</li>
+</ul>
+<p><strong>Tech stack:</strong> .NET Framework, ARM/Bicep templates, JSON, Angular, YML, PowerShell, Microsoft Azure, Azure DevOps, SQL, Docker container, Sonar Cloud, Linux.</p>
+<h4 id="accenture-sitecore-service-022020-112020">Accenture, Sitecore Service (02/2020-11/2020)</h4>
+<p><strong>DevOps, Infrastructure Engineer</strong></p>
+<ul>
+<li>Maintaining existing infrastructure in Azure, improve and create PowerShell scripts, YML and ARM templates. Improve build and release pipelines in GitLab, manage and configure Apache Solr search platform. Maintaining backups and restoring databases in Azure SQL Server.</li>
+</ul>
+<p><strong>Tech stack:</strong> ARM templates, DSC, JSON, YML, PowerShell, Apache Solr, Microsoft Azure, GitLab CI/CD, SQL.</p>
+<h2 id="certifications">Certifications</h2>
+<ul>
+<li>Microsoft Certified: Azure Solutions Architect Expert, AZ-305 (Designing Microsoft Azure Infrastructure Solutions), AZ-104 (Microsoft Azure Administrator), AZ-900 (Azure Fundamentals).</li>
+<li>Riga Coding School (Programming basics in 6 weeks certificate achieved/Riga).</li>
+</ul>
+<h2 id="skills">Skills</h2>
+<h3 id="technical">Technical:</h3>
+<ul>
+<li>Cloud architecture, Azure Cloud, PowerShell, ARM Template, YAML, Bicep, SHELL, CLI, Terraform, Packer.</li>
+<li>CI/CD pipelines, GitHub Actions, DevOps Azure, GitLab, Jenkins, Octopus, TeamCity.</li>
+<li>Docker Container, AKS, K8S.</li>
+<li>.NET, Angular.</li>
+<li>SQL, Postgres, MySQL Linux Ubuntu server, IIS, flexible servers.</li>
+<li>Visual Studio Code, Visual Studio.</li>
+<li>Sonar Cloud, SonarQube.</li>
+<li>Service Bus, RabbitMQ.</li>
+</ul>
+<h3 id="soft">Soft:</h3>
+<ul>
+<li>Microsoft, Linux.</li>
+</ul>
+<h3 id="methodologies">Methodologies:</h3>
+<ul>
+<li>Scrum, Agile, CI/CD, SRE.</li>
+</ul>
+<h2 id="language-skills">Language Skills</h2>
+<ul>
+<li>English – Good</li>
+<li>Russian – Native</li>
+<li>Latvian – Fluent</li>
+</ul>
 
+</body>
 </html>
