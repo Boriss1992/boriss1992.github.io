@@ -7,431 +7,101 @@
 <script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS": {"availableFonts":["TeX"],"scale": 150}});</script>
 
 <style>
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
-
-body {
-    font-family: Arial, sans-serif; /* Clean, professional font */
-    font-size: 16px; /* Slightly larger font size */
-    line-height: 1.8; /* Increased line height for readability */
-    color: #333; /* Dark grey text for better readability */
-    background-color: #fff; /* White background */
-    margin: 0;
-    padding: 40px 20px; /* Padding to avoid content sticking to the edges */
-    max-width: 800px; /* Max width for the content area */
-    margin: auto; /* Center the content block horizontally */
-}
-
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
-}
-
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
-}
-
-
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
-}
-
-body.showEditorSelection .code-line {
-	position: relative;
-}
-
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
-}
-
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
-}
-
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
-}
-
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	color: #4080D0;
-	text-decoration: none;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
-}
-
-hr {
-	border: 0;
-	height: 2px;
-	border-bottom: 2px solid;
-}
-
-h1 {
-    font-size: 28px; /* Larger font size for the main heading */
-    color: #000; /* Black color for the main title */
-    margin-bottom: 0.5em; /* Space below the header */
-    text-align: center; /* Center-align the title */
-}
-
-
-To center the text and style it similarly to the CV shown in your latest screenshot, we'll need to adjust the CSS. Here’s how you can achieve the centered text along with a clean, professional layout:
-
-Updated CSS Styling
-This CSS includes changes to center the content and fine-tune the typography to match the example more closely:
-
-css
-Kopēt kodu
-body {
-    font-family: Arial, sans-serif; /* Clean, professional font */
-    font-size: 16px; /* Slightly larger font size */
-    line-height: 1.8; /* Increased line height for readability */
-    color: #333; /* Dark grey text for better readability */
-    background-color: #fff; /* White background */
-    margin: 0;
-    padding: 40px 20px; /* Padding to avoid content sticking to the edges */
-    max-width: 800px; /* Max width for the content area */
-    margin: auto; /* Center the content block horizontally */
-}
-
-h1 {
-    font-size: 28px; /* Larger font size for the main heading */
-    color: #000; /* Black color for the main title */
-    margin-bottom: 0.5em; /* Space below the header */
-    text-align: center; /* Center-align the title */
-}
-
-h2 {
-    font-size: 22px; /* Size for secondary headings */
-    color: #000; /* Black color for subheadings */
-    margin-top: 2em; /* Space above subheadings */
-    margin-bottom: 0.5em; /* Space below subheadings */
-    border-bottom: 2px solid #ccc; /* Adds a solid line below the heading */
-    padding-bottom: 0.3em; /* Small padding below the heading */
-    text-align: center; /* Center-align subheadings */
-}
-
-h3 {
-    font-size: 18px; /* Size for tertiary headings */
-    margin-top: 1.5em; /* Space above tertiary headings */
-    text-align: center; /* Center-align tertiary headings */
-}
-p, li {
-    margin-bottom: 0.8em; /* Space below paragraphs and list items */
-    text-align: center; /* Center-align paragraphs and list items */
-}
-
-ul {
-    list-style-position: inside; /* Positions the bullet inside to maintain the center alignment */
-}
-
-a {
-    color: #067df7; /* Bright link color */
-    text-decoration: none; /* No underline */
-}
-
-a:hover {
-    text-decoration: underline; /* Underline on hover for better interaction feedback */
-}
-h1 code,
-h2 code,
-h3 code,
-h4 code,
-h5 code,
-h6 code {
-	font-size: inherit;
-	line-height: auto;
-}
-
-a:hover {
-	color: #4080D0;
-	text-decoration: underline;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
-}
-
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left: 5px solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 14px;
-	line-height: 19px;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-.mac code {
-	font-size: 12px;
-	line-height: 18px;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-/** Theming */
-
-.vscode-light,
-.vscode-light pre code {
-	color: rgb(30, 30, 30);
-}
-
-.vscode-dark,
-.vscode-dark pre code {
-	color: #DDD;
-}
-
-.vscode-high-contrast,
-.vscode-high-contrast pre code {
-	color: white;
-}
-
-.vscode-light code {
-	color: #A31515;
-}
-
-.vscode-dark code {
-	color: #D7BA7D;
-}
-
-.vscode-light pre:not(.hljs),
-.vscode-light code > div {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre:not(.hljs),
-.vscode-dark code > div {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre:not(.hljs),
-.vscode-high-contrast code > div {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
-}
-
-.vscode-light blockquote,
-.vscode-dark blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.vscode-high-contrast blockquote {
-	background: transparent;
-	border-color: #fff;
-}
-</style>
-
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #333;
+        background-color: #fff;
+        margin: 0;
+        padding: 40px 20px;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    h1, h2, h3, h4 {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+        color: #000;
+        margin-bottom: 0.5em;
+    }
+
+    h2 {
+        font-size: 22px;
+        color: #000;
+        margin-top: 2em;
+        margin-bottom: 0.5em;
+        border-bottom: 2px solid #ccc;
+        padding-bottom: 0.3em;
+    }
+
+    h3 {
+        font-size: 18px;
+        margin-top: 1.5em;
+        text-align: center;
+    }
+
+    p, li {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    ul {
+        list-style-type: circle;
+    }
+
+    a {
+        color: #067df7;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    #code-csp-warning {
+        position: fixed;
+        top: 0;
+        right: 0;
+        color: white;
+        margin: 16px;
+        text-align: center;
+        font-size: 12px;
+        font-family: sans-serif;
+        background-color: #444444;
+        cursor: pointer;
+        padding: 6px;
+        box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+    }
+
+    #code-csp-warning:hover {
+        background-color: #007acc;
+        box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+        text-align: left;
+    }
+
+    blockquote {
+        background: rgba(127, 127, 127, 0.1);
+        border-left: 5px solid rgba(0, 122, 204, 0.5);
+        padding: 0.5em 10px;
+        margin: 20px 0;
+    }
+
+    code {
+        background-color: rgba(220, 220, 220, 0.4);
+        color: #A31515;
+        padding: 2px 4px;
+        font-family: Consolas, 'Courier New', monospace;
+    }
 </style>
 
 </head>
