@@ -14,12 +14,14 @@
 
 body {
     font-family: Arial, sans-serif; /* Clean, professional font */
-    font-size: 14px; /* Optimal size for readability */
-    line-height: 1.6; /* Adequate line height for readability */
-    color: #333; /* Dark grey text color */
+    font-size: 16px; /* Slightly larger font size */
+    line-height: 1.8; /* Increased line height for readability */
+    color: #333; /* Dark grey text for better readability */
     background-color: #fff; /* White background */
-    margin: 20px; /* Margin around the content */
-    padding: 0;
+    margin: 0;
+    padding: 40px 20px; /* Padding to avoid content sticking to the edges */
+    max-width: 800px; /* Max width for the content area */
+    margin: auto; /* Center the content block horizontally */
 }
 
 #code-csp-warning {
@@ -116,16 +118,71 @@ hr {
 }
 
 h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
+    font-size: 28px; /* Larger font size for the main heading */
+    color: #000; /* Black color for the main title */
+    margin-bottom: 0.5em; /* Space below the header */
+    text-align: center; /* Center-align the title */
 }
 
-h1, h2, h3 {
-	font-weight: normal;
+
+To center the text and style it similarly to the CV shown in your latest screenshot, we'll need to adjust the CSS. Here’s how you can achieve the centered text along with a clean, professional layout:
+
+Updated CSS Styling
+This CSS includes changes to center the content and fine-tune the typography to match the example more closely:
+
+css
+Kopēt kodu
+body {
+    font-family: Arial, sans-serif; /* Clean, professional font */
+    font-size: 16px; /* Slightly larger font size */
+    line-height: 1.8; /* Increased line height for readability */
+    color: #333; /* Dark grey text for better readability */
+    background-color: #fff; /* White background */
+    margin: 0;
+    padding: 40px 20px; /* Padding to avoid content sticking to the edges */
+    max-width: 800px; /* Max width for the content area */
+    margin: auto; /* Center the content block horizontally */
 }
 
+h1 {
+    font-size: 28px; /* Larger font size for the main heading */
+    color: #000; /* Black color for the main title */
+    margin-bottom: 0.5em; /* Space below the header */
+    text-align: center; /* Center-align the title */
+}
+
+h2 {
+    font-size: 22px; /* Size for secondary headings */
+    color: #000; /* Black color for subheadings */
+    margin-top: 2em; /* Space above subheadings */
+    margin-bottom: 0.5em; /* Space below subheadings */
+    border-bottom: 2px solid #ccc; /* Adds a solid line below the heading */
+    padding-bottom: 0.3em; /* Small padding below the heading */
+    text-align: center; /* Center-align subheadings */
+}
+
+h3 {
+    font-size: 18px; /* Size for tertiary headings */
+    margin-top: 1.5em; /* Space above tertiary headings */
+    text-align: center; /* Center-align tertiary headings */
+}
+p, li {
+    margin-bottom: 0.8em; /* Space below paragraphs and list items */
+    text-align: center; /* Center-align paragraphs and list items */
+}
+
+ul {
+    list-style-position: inside; /* Positions the bullet inside to maintain the center alignment */
+}
+
+a {
+    color: #067df7; /* Bright link color */
+    text-decoration: none; /* No underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for better interaction feedback */
+}
 h1 code,
 h2 code,
 h3 code,
