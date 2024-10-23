@@ -24,7 +24,7 @@ body {
 }
 
 h1 {
-    font-size: 26px; /* Prominent size for main title */
+    font-size: 36px; /* Prominent size for main title */
     color: #0056b3; /* Brand blue for emphasis */
     text-align: left; /* Centered title */
     margin-bottom: 0.5em; /* Space below the title */
@@ -77,7 +77,15 @@ ul.no-bullets {
 ul.no-bullets li {
     padding-left: 0; /* No indentation for specific list items */
 }
-
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img {
+    max-width: 150px;
+    height: auto;
+}
 
 
 </style>
@@ -87,14 +95,17 @@ ul.no-bullets li {
 <h1>CV</h1>
 <h2>Boriss Serikovs</h2>
 <h3 id="profession">Sr. DevOps Engineer / Lead DevOps Engineer / Azure Infrastructure Engineer</h3>
+<div class="header">
 <ul class="contact-info">
     <li>Email: <a href="mailto:serikov.boriss@gmail.com">serikov.boriss@gmail.com</a></li>
     <li>Phone: 28211078</li>
     <li>LinkedIn: <a href="https://www.linkedin.com/in/boriss-serikovs-4a0a499a">View LinkedIn Profile</a></li>
 </ul>
+    <img src="picture.jpg" alt="Boriss Serikovs">
+</div>
 <div class="summary">
     <h2>Summary</h2>
-    <p>Knowledge of testing and deployment procedures allows me to bridge the gap between development and operations for an efficient work model. I enjoy scripting, configuring CI/CD pipelines, and infrastructures, searching for interesting decisions, and solving tasks.</p>
+    <p>With a robust background in systems engineering, I possess extensive knowledge of testing, deployment procedures, and CI/CD pipeline configuration, which enables me to effectively bridge the gap between development and operational needs. My expertise extends to scripting and the orchestration of complex infrastructure environments, contributing significantly to workflow optimization and system reliability. I thrive on identifying and implementing innovative solutions that enhance scalability and performance. My hands-on approach and technical acumen have led to successful deployments across a diverse range of projects, demonstrating my ability to drive projects to completion while ensuring high security and compliance standards.</p>
 </div>
 <h2 id="professional-experience">Professional Experience</h2>
 
@@ -165,15 +176,6 @@ ul.no-bullets li {
         <li>ASP.NET MVC</li>
     </ul>
 
-    <h3>Application Programming Interfaces:</h3>
-    <ul>
-        <li>REST (OpenAPI, etc.)</li>
-        <li>RPC (WCF, gRPC etc.)</li>
-        <li>GraphQL</li>
-        <li>SOAP</li>
-        <li>WebSockets</li>
-    </ul>
-
     <h3>Message brokers:</h3>
     <ul>
         <li>Azure Service Bus</li>
@@ -197,7 +199,6 @@ ul.no-bullets li {
         <li>GitLab</li>
         <li>TeamCity</li>
         <li>Octopus Deploy</li>
-        <li>CakeBuild</li>
     </ul>
 
     <h3>Containerization:</h3>
@@ -221,15 +222,52 @@ ul.no-bullets li {
         <li>Nginx</li>
     </ul>
 
-    <h3>Cloud Services (PaaS/SaaS/IaaS):</h3>
+    <h3>Azure Cloud Services (PaaS/SaaS/IaaS):</h3>
     <ul>
-        <li>Azure App Services</li>
+        <li>Azure Virtual Machines</li>
+        <li>Azure Kubernetes Service (AKS)</li>
         <li>Azure Functions</li>
-        <li>Azure Service Bus</li>
+        <li>Azure App Service</li>
+        <li>Azure Container Instances (ACI)</li>
+        <li>Azure Virtual Network (VNet)</li>
+        <li>Azure Load Balancer</li>
+        <li>Azure Application Gateway</li>
+        <li>Azure Traffic Manager</li>
+        <li>Azure VPN Gateway</li>
+        <li>Azure DNS</li>
+        <li>Azure Firewall</li>
+        <li>Azure Front Door</li>
+        <li>Azure Blob Storage</li>
+        <li>Azure Disk Storage</li>
+        <li>Azure File Storage</li>
+        <li>Azure Queue Storage</li>
+        <li>Azure SQL Database</li>
+        <li>Azure Cosmos DB</li>
+        <li>Azure Database for MySQL</li>
+        <li>Azure Database for PostgreSQL</li>
+        <li>Azure SQL Managed Instance</li>
+        <li>Azure Cache for Redis</li>
+        <li>Azure Database Migration Service</li>
+        <li>Azure Entra ID (Azure AD)</li>
+        <li>Azure AD B2C</li>
+        <li>Azure AD Domain Services</li>
+        <li>Azure Multi-Factor Authentication (MFA)</li>
         <li>Azure Key Vault</li>
-        <li>Azure Kubernetes Services</li>
-        <!-- Additional Azure services and features -->
+        <li>Azure DevOps Services</li>
+        <li>Azure DevTest Labs</li>
+        <li>Azure Monitor</li>
+        <li>Azure Application Insights</li>
+        <li>Azure API Management</li>
+        <li>Azure Logic Apps</li>
+        <li>Azure Event Grid</li>
+        <li>Azure Automation</li>
+        <li>Azure Machine Learning</li>
+        <li>Azure Policy</li>
+        <li>Azure Privileged Identity Management (PIM)</li>
+        <li>Azure Backup</li>
+        <li>Azure CDN</li>
     </ul>
+    
 
     <h3>Test tools:</h3>
     <ul>
@@ -238,20 +276,13 @@ ul.no-bullets li {
         <li>moq</li>
     </ul>
 
-    <h3>IoC containers:</h3>
-    <ul>
-        <li>Unity IoC</li>
-        <li>Structure Map IoC</li>
-    </ul>
-
     <h3>Other Skills:</h3>
     <ul>
-        <li>Microservices architecture</li>
-        <li>SOA architecture</li>
-        <li>Technical management</li>
-        <li>Software development</li>
+        <li>Branch strategy</li>
+        <li>CI/CD</li>
         <li>DevOps</li>
         <li>Infrastructure as Code (IaC)</li>
+        <li>Release managment</li>
     </ul>
 <h2 id="language-skills">Language Skills</h2>
 <ul>
