@@ -7,9 +7,6 @@
 <link rel="stylesheet" href="style.css">
     
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
-<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [['$','$'], ['\\(','\\)']]}});</script>
-<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS": {"availableFonts":["TeX"],"scale": 150}});</script>
 
 <style>
 body {
@@ -83,8 +80,10 @@ ul.no-bullets li {
     align-items: center;
 }
 .header img {
-    max-width: 150px;
-    height: auto;
+    width: 150px;
+    height: 225px; /* matches the photo's native 1363x2048 ratio */
+    object-fit: cover; /* никогда не растягивает фото */
+    flex-shrink: 0; /* не даёт flex-контейнеру сжимать фото по ширине */
 }
 
 </style>
@@ -93,23 +92,65 @@ ul.no-bullets li {
 <body>
 <h1>CV</h1>
 <h2>Boriss Serikovs</h2>
-<h3 id="profession">Sr. DevOps Engineer / Lead DevOps Engineer / Azure Infrastructure Engineer</h3>
+<h3 id="profession">Lead Cloud / DevOps Engineer — Azure Infrastructure, Migrations & AI-Assisted Automation</h3>
 <div class="header">
 <ul class="contact-info">
-    <li>Email: <a href="mailto:serikov.boriss@gmail.com">serikov.boriss@gmail.com</a></li>
+    <li>Email: <a href="mailto:boriss.serikovs@devetra.eu">boriss.serikovs@devetra.eu</a></li>
     <li>Phone: +371 28211078</li>
     <li>LinkedIn: <a href="https://www.linkedin.com/in/boriss-serikovs-4a0a499a">View LinkedIn Profile</a></li>
     <li>Website: <a href="https://boriss.serikovscv.id.lv">boriss.serikovscv.id.lv</a></li>
 </ul>
-    <img src="picture.jpg" alt="Boriss Serikovs">
+    <img src="picture-cv.jpg" alt="Boriss Serikovs">
 </div>
 <div class="summary">
     <h2>Summary</h2>
-    <p>With a robust background in systems engineering, I possess extensive knowledge of testing, deployment procedures, and CI/CD pipeline configuration, which enables me to effectively bridge the gap between development and operational needs. My expertise extends to scripting and the orchestration of complex infrastructure environments, contributing significantly to workflow optimization and system reliability. I thrive on identifying and implementing innovative solutions that enhance scalability and performance. My hands-on approach and technical acumen have led to successful deployments across a diverse range of projects, demonstrating my ability to drive projects to completion while ensuring high security and compliance standards.</p>
+    <p>I design and deliver cloud infrastructure at enterprise scale, with a track record of leading migrations to Microsoft Azure — from legacy on-premise platforms to multi-application AWS to Azure programmes — where I own the architecture end to end, from network topology to production rollout. My core strength is Infrastructure as Code: I build reusable Terraform modules and standardized deployment patterns that make environments reproducible and disposable on demand. I take full ownership of CI/CD in GitLab and Azure DevOps, automating build, testing, and deployment so that releases are repeatable and low risk. Security is built into my designs rather than added afterwards, through Hub-and-Spoke topologies, Private Endpoints, firewall policies, and secret management that keeps credentials out of pipelines. I also apply AI-assisted workflows and MCP tooling to infrastructure delivery, and act as a technical reference for the teams I work with through code reviews, mentoring, and knowledge sharing.</p>
 </div>
 <h2 id="professional-experience">Professional Experience</h2>
 
-<h4 id="ltd-itbo-own-company-sre-operations-122023-current">Arvato Systems Latvia, SRE, Operations (12/2023-05/2025)</h4>
+<h4 id="epam-lead-system-engineer-lseg">EPAM, Lead System Engineer on LSEG migration (12/2025-Present)</h4>
+<p><strong>Project:</strong> Migration of a suite of enterprise analytics applications from AWS to Azure, ensuring seamless integration, optimized performance, and minimal disruption to operational workflows.</p>
+<ul>
+<li>Led infrastructure enablement for a large-scale AWS to Azure migration, supporting a dual-cloud deployment strategy with full compatibility, security, and operational continuity.</li>
+<li>Designed Azure Infrastructure as Code in Terraform, building reusable modules and standardized deployment patterns for compute, networking, and security aligned with enterprise governance policies.</li>
+<li>Architected GitLab CI/CD pipelines serving both AWS and Azure environments, automating infrastructure provisioning and application deployment through reusable YAML templates.</li>
+<li>Implemented secure authentication and secret management with HashiCorp Vault and service principals, enabling fully automated, compliant deployments without exposing credentials.</li>
+<li>Configured Azure networking to strict security requirements: Private Endpoints, Hub-and-Spoke topology, Firewall policies, Virtual Networks, and secure connectivity.</li>
+<li>Integrated Datadog monitoring and JFrog Artifactory artifact management for reliable deployment validation and operational visibility across environments.</li>
+<li>Acted as the primary technical reference for Azure policies, Terraform standards, and deployment practices; ran code reviews, mentored engineers, and led knowledge-sharing sessions, reducing onboarding time and deployment issues.</li>
+<li>Raised engineering productivity through standardized IaC practices, reusable CI/CD templates, AI-assisted development workflows, and Terraform change comparison strategies, cutting deployment failures.</li>
+</ul>
+<p><strong>Tech stack:</strong> Microsoft Azure, AWS, Terraform, GitLab CI/CD, YAML, HashiCorp Vault, Datadog, JFrog Artifactory, Azure Private Endpoints, Hub-and-Spoke, Azure Firewall, VNET, Service Principals, Azure Policy.</p>
+<h4 id="msuk-mlms-build-engineer-052025-122025">Microsoft UK, Senior System Engineer on LSEG migration (05/2025-12/2025)</h4>
+<p><strong>Project:</strong> Cloud migration programme moving a legacy on-premise enterprise platform to Microsoft Azure, covering discovery, architecture design, and full production rollout.</p>
+<ul>
+<li>Led the full-scale migration of a legacy on-premise Java platform to a production-grade Azure architecture, designing a secure, highly available infrastructure with Hub-and-Spoke topology, isolated private networking, firewall policies, and controlled third-party connectivity.</li>
+<li>Architected Azure App Services with custom domains across three fully isolated environments (development, staging, production), including secure service integrations and backup and recovery strategies.</li>
+<li>Built end-to-end GitLab CI/CD pipelines for Gradle-based Java applications with JFrog artifact management, fully automating build, testing, and deployment.</li>
+<li>Provisioned the entire cloud infrastructure and application stack with Terraform, ensuring reproducible environments and one-command deployment and teardown.</li>
+<li>Migrated PostgreSQL databases to Azure with cross-region replication and automated failover for disaster recovery, and developed Bash-based pipelines for full data migration and initialization from the legacy environment.</li>
+<li>Delivered a fully cloud-native deployment model, replacing on-premise infrastructure with a scalable, secure, and automated Azure platform.</li>
+</ul>
+<p><strong>Tech stack:</strong> Microsoft Azure, Terraform, GitLab CI/CD, Java, Gradle, JFrog Artifactory, Azure App Service, Azure Database for PostgreSQL, Hub-and-Spoke, Azure Firewall, Private Endpoints, BASH, Linux.</p>
+<h4 id="matecat-on-premise-devops-engineer">Confidential client (translation services), DevOps Engineer (2025-2026)</h4>
+<p><strong>Project:</strong> On-premise infrastructure for an AI-powered text translation platform.</p>
+<ul>
+<li>Deployed and configured MateCat in a local Linux environment as part of the on-premise infrastructure for AI-powered text translation.</li>
+<li>Containerized MateCat with Docker and integrated it with the application, managing delivery through GitLab and using Cursor for AI-assisted development.</li>
+</ul>
+<p><strong>Tech stack:</strong> Linux, Docker, MateCat, GitLab, Cursor, on-premise infrastructure.</p>
+<h4 id="construction-equipment-platform-devops-engineer">Confidential client (construction equipment trading), DevOps / Infrastructure Engineer (2025-2026)</h4>
+<p><strong>Project:</strong> Greenfield cloud infrastructure for a platform selling construction machinery.</p>
+<ul>
+<li>Designed the entire architecture from scratch, owning solution planning, sprint planning, and delivery of the full infrastructure roadmap.</li>
+<li>Built the whole environment in Azure using Terraform, including network topology design, secure networking configuration, and server provisioning.</li>
+<li>Designed and configured end-to-end CI/CD pipelines covering build, release, and application deployment to Azure.</li>
+<li>Provisioned and configured the Azure platform services behind the application with Terraform, including Azure Data Factory, SQL Managed Instances, and Front Door.</li>
+<li>Set up and configured monitoring and log analysis with Elasticsearch, providing visibility into application health across environments.</li>
+<li>Leveraged MCP connectors and AI agents in Cursor to build and automate infrastructure, accelerating delivery.</li>
+</ul>
+<p><strong>Tech stack:</strong> Microsoft Azure, Terraform, CI/CD pipelines, Azure Data Factory, Azure SQL Managed Instance, Azure Front Door, Elasticsearch, network topology, MCP connectors, AI agents, Cursor.</p>
+<h4 id="arvato-sre-operations">Arvato Systems Latvia, SRE, Operations (12/2023-05/2025)</h4>
 <p><strong>Senior DevOps, Infrastructure Engineer, Cloud Application Support, Cloud Platform Support, Cloud Platform Developer</strong></p>
 <ul>
 <li>Supported the operational demands of over 200+ concurrent projects by embedding SRE standards to ensure high system reliability and performance.</li>
@@ -123,7 +164,7 @@ ul.no-bullets li {
 <li>Leveraged Microsoft's Cloud Adoption Framework (Landing Zone) to ensure compliance and adherence to best practices in configuration and deployment.</li>
 <li>Consulted with clients to provide resource information and guidance on infrastructure solutions.</li>
 </ul>
-<p><strong>Tech stack:</strong> SRE Standards, Cloud Adoption Framework (Landing Zone)  , Azure DevOps, Terraform Modules, Azure Terraform, YML, PowerShell, CLI, SHELL, Linux, Packer, DevOps, Flexible servers, Azure Front Door, VMs, AKS, AppGateway, NSG, VNET, NAT gateway, WAF, Web Services, Log Analytics, ACR, Management Groups, etc.</p>
+<p><strong>Tech stack:</strong> SRE Standards, Cloud Adoption Framework (Landing Zone), Azure DevOps, Terraform Modules, Azure Terraform, YML, PowerShell, CLI, SHELL, Linux, Packer, DevOps, Flexible servers, Azure Front Door, VMs, AKS, AppGateway, NSG, VNET, NAT gateway, WAF, Web Services, Log Analytics, ACR, Management Groups, etc.</p>
 <h4 id="altudo-development-service-microservices-implementation-062023-122023">Altudo, Development Service, Microservices Implementation (06/2023-12/2023)</h4>
 <p><strong>DevOps, Infrastructure Engineer</strong></p>
 <ul>
@@ -157,15 +198,14 @@ ul.no-bullets li {
 <li>AZ-104 (Microsoft Azure Administrator)</li>
 <li>AZ-900 (Azure Fundamentals)</li>
  </ul>
-<h2 id="certifications">Courses</h2>
-<ul>       
-<li>Riga Coding School (Programming basics in 6 weeks certificate achieved/Riga).</li>
+<h2 id="courses">Courses</h2>
+<ul>
 <li>Nvidia Generative AI Explained Course</li>
 </ul>
 <h2 id="skills">Skills, Tools & Technologies</h2>
     <h3>Programming & Scripting:</h3>
     <ul>
-        <li>C#</li>
+        <li>Python</li>
         <li>PowerShell</li>
         <li>BASH</li>
         <li>CLI</li>
@@ -174,13 +214,9 @@ ul.no-bullets li {
 
     <h3>Frameworks & Platforms:</h3>
     <ul>
-        <li>Angular</li>
-        <li>Node.js</li>
         <li>Azure Cloud</li>
         <li>.NET</li>
         <li>.NET Core</li>
-        <li>ASP.NET Web API</li>
-        <li>ASP.NET MVC</li>
     </ul>
 
     <h3>Message brokers:</h3>
@@ -217,11 +253,23 @@ ul.no-bullets li {
         <li>K9s</li>
     </ul>
 
+    <h3>Monitoring & Observability:</h3>
+    <ul>
+        <li>Elasticsearch</li>
+        <li>Datadog</li>
+    </ul>
+
     <h3>Infrastructure as Code (IaC):</h3>
     <ul>
         <li>Bicep</li>
         <li>ARM Templates</li>
         <li>Terraform</li>
+    </ul>
+
+    <h3>AI & MCP:</h3>
+    <ul>
+        <li><strong>AI development tools:</strong> Cursor, Claude Code, GitHub Copilot, AI agents & AI-assisted development workflows</li>
+        <li><strong>MCP:</strong> Model Context Protocol, Azure MCP Server, Context7, Perplexity, Linear, Sentry, Supabase, Stitch, TestSprite</li>
     </ul>
 
     <h3>Web Servers:</h3>
@@ -232,57 +280,21 @@ ul.no-bullets li {
 
     <h3>Azure Cloud Services (PaaS/SaaS/IaaS):</h3>
     <ul>
-        <li>Azure Virtual Machines</li>
-        <li>Azure Kubernetes Service (AKS)</li>
-        <li>Azure Functions</li>
-        <li>Azure App Service</li>
-        <li>Azure Container Instances (ACI)</li>
-        <li>Azure Virtual Network (VNet)</li>
-        <li>Azure Load Balancer</li>
-        <li>Azure Application Gateway</li>
-        <li>Azure Traffic Manager</li>
-        <li>Azure VPN Gateway</li>
-        <li>Azure DNS</li>
-        <li>Azure Firewall</li>
-        <li>Azure Front Door</li>
-        <li>Azure Blob Storage</li>
-        <li>Azure Disk Storage</li>
-        <li>Azure File Storage</li>
-        <li>Azure Queue Storage</li>
-        <li>Azure SQL Database</li>
-        <li>Azure Cosmos DB</li>
-        <li>Azure Database for MySQL</li>
-        <li>Azure Database for PostgreSQL</li>
-        <li>Azure SQL Managed Instance</li>
-        <li>Azure Cache for Redis</li>
-        <li>Azure Database Migration Service</li>
-        <li>Azure Entra ID (Azure AD)</li>
-        <li>Azure AD B2C</li>
-        <li>Azure AD Domain Services</li>
-        <li>Azure Multi-Factor Authentication (MFA)</li>
-        <li>Azure Key Vault</li>
-        <li>Azure DevOps Services</li>
-        <li>Azure DevTest Labs</li>
-        <li>Azure Monitor</li>
-        <li>Azure Application Insights</li>
-        <li>Azure API Management</li>
-        <li>Azure Logic Apps</li>
-        <li>Azure Event Grid</li>
-        <li>Azure Automation</li>
-        <li>Azure Machine Learning</li>
-        <li>Azure Policy</li>
-        <li>Azure Privileged Identity Management (PIM)</li>
-        <li>Azure Backup</li>
-        <li>Azure CDN</li>
+        <li><strong>Compute:</strong> Virtual Machines, Kubernetes Service (AKS), Functions, App Service, Container Instances (ACI)</li>
+        <li><strong>Networking:</strong> Virtual Network (VNet), Load Balancer, Application Gateway, Traffic Manager, VPN Gateway, DNS, Firewall, Front Door, CDN</li>
+        <li><strong>Storage & Data:</strong> Blob / Disk / File / Queue Storage, SQL Database, SQL Managed Instance, Cosmos DB, Database for PostgreSQL, Database for MySQL, Cache for Redis, Database Migration Service, Data Factory</li>
+        <li><strong>Identity & Security:</strong> Entra ID (Azure AD), AD B2C, AD Domain Services, Multi-Factor Authentication (MFA), Key Vault, Privileged Identity Management (PIM), Policy</li>
+        <li><strong>DevOps & Monitoring:</strong> Azure DevOps Services, DevTest Labs, Monitor, Application Insights, Backup</li>
+        <li><strong>Integration & Automation:</strong> API Management, Logic Apps, Event Grid, Automation, Machine Learning</li>
+    </ul>
+
+    <h3>AWS Cloud Services:</h3>
+    <ul>
+        <li>Amazon VPC</li>
+        <li>Amazon EC2 instances</li>
+        <li>Amazon Route 53</li>
     </ul>
     
-
-    <h3>Test tools:</h3>
-    <ul>
-        <li>xUnit</li>
-        <li>NUnit</li>
-        <li>moq</li>
-    </ul>
 
     <h3>Other Skills:</h3>
     <ul>
